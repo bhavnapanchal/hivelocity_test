@@ -54,14 +54,19 @@ class TodoCell: UITableViewCell {
 
         NSLayoutConstraint.activate(
             [
+                /// ISSUE:(TEXT OVERLAPPING) You need to set "lessThanOrEqualTo" idLabel's leading anchor rather than idLabel's rightanchor
+                /// So titleLabel's width will increase to leading point of idLable or less than that and it will not overlap text.
+                
+                /// SUGGESTION: You should always use leading and trailing anchors instead of left or right, so it wll automatically flip when app is running right to left locale.
+
                 idLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-                idLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
+                idLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
                 titleLabel.topAnchor.constraint(equalTo: idLabel.topAnchor),
-                titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
-                titleLabel.rightAnchor.constraint(equalTo: idLabel.rightAnchor),
+                titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+                titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: idLabel.leadingAnchor),
                 completedLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
-                completedLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
-                completedLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
+                completedLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+                completedLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
                 completedLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
             ]
         )
