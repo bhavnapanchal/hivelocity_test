@@ -17,21 +17,26 @@ class ViewController: UIViewController {
 
     var state: ScreenState? = .loading {
         didSet {
-            switch state! {
-            case .loading:
-                indicator.startAnimating()
-                tableView.isHidden = true
-                errorLabel.isHidden = true
-            case .loaded:
-                indicator.stopAnimating()
-                tableView.isHidden = false
-                tableView.reloadData()
-                errorLabel.isHidden = true
-            case .error(let error):
-                indicator.stopAnimating()
-                tableView.isHidden = true
-                errorLabel.isHidden = false
-                errorLabel.text = error.localizedDescription
+            // App crashing because variable state is updated in background thread and so didset executed in same thread.
+            // UI should updated in main thread.
+            
+            OperationQueue.main.addOperation {
+                switch self.state! {
+                case .loading:
+                    self.indicator.startAnimating()
+                    self.tableView.isHidden = true
+                    self.errorLabel.isHidden = true
+                case .loaded:
+                    self.indicator.stopAnimating()
+                    self.tableView.isHidden = false
+                    self.tableView.reloadData()
+                    self.errorLabel.isHidden = true
+                case .error(let error):
+                    self.indicator.stopAnimating()
+                    self.tableView.isHidden = true
+                    self.errorLabel.isHidden = false
+                    self.errorLabel.text = error.localizedDescription
+                }
             }
         }
     }
