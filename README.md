@@ -27,3 +27,6 @@ Timeline and extra points
 
 <img src="doc/issue-image.png" width="300" />
 # hivelocity_test
+
+**NOTE: Changes are available in develop branch. master branch contains original code**
+
