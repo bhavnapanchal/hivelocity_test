@@ -55,13 +55,13 @@ class TodoCell: UITableViewCell {
         NSLayoutConstraint.activate(
             [
                 idLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-                idLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
+                idLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
                 titleLabel.topAnchor.constraint(equalTo: idLabel.topAnchor),
-                titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
-                titleLabel.rightAnchor.constraint(equalTo: idLabel.rightAnchor),
+                titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+                titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: idLabel.leadingAnchor),
                 completedLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
-                completedLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
-                completedLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
+                completedLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+                completedLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
                 completedLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
             ]
         )
