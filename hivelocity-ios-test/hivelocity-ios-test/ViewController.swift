@@ -17,21 +17,26 @@ class ViewController: UIViewController {
 
     var state: ScreenState? = .loading {
         didSet {
-            switch state! {
-            case .loading:
-                indicator.startAnimating()
-                tableView.isHidden = true
-                errorLabel.isHidden = true
-            case .loaded:
-                indicator.stopAnimating()
-                tableView.isHidden = false
-                tableView.reloadData()
-                errorLabel.isHidden = true
-            case .error(let error):
-                indicator.stopAnimating()
-                tableView.isHidden = true
-                errorLabel.isHidden = false
-                errorLabel.text = error.localizedDescription
+            OperationQueue.main.addOperation { [weak self] in
+
+                guard let strongSelf = self else { return }
+                
+                switch strongSelf.state! {
+                    case .loading:
+                        strongSelf.indicator.startAnimating()
+                        strongSelf.tableView.isHidden = true
+                        strongSelf.errorLabel.isHidden = true
+                    case .loaded:
+                        strongSelf.indicator.stopAnimating()
+                        strongSelf.tableView.isHidden = false
+                        strongSelf.tableView.reloadData()
+                        strongSelf.errorLabel.isHidden = true
+                    case .error(let error):
+                        strongSelf.indicator.stopAnimating()
+                        strongSelf.tableView.isHidden = true
+                        strongSelf.errorLabel.isHidden = false
+                        strongSelf.errorLabel.text = error.localizedDescription
+                }
             }
         }
     }
