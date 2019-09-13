@@ -28,3 +28,22 @@ Timeline and extra points
 <img src="doc/issue-image.png" width="300" />
 # hivelocity_test
 
+##Enhancements
+Here are list of suggestions and you can find details the same into issue linked to it.
+
+1. Enable user to altered todo list.
+[issue #10](https://github.com/bhavnapanchal/hivelocity_test/issues/10)
+2. Make user to create private todo list.
+[issue #11](https://github.com/bhavnapanchal/hivelocity_test/issues/11)
+3. Implement UISplitViewController for better UI/UX.
+[issue #12](https://github.com/bhavnapanchal/hivelocity_test/issues/12)
+4. Implement MVVM architecture.
+[issue #13](https://github.com/bhavnapanchal/hivelocity_test/issues/13)
+5. Implement Unit test.
+[issue #14](https://github.com/bhavnapanchal/hivelocity_test/issues/14)
+6. Enable user to refresh todo list item.
+[issue #18](https://github.com/bhavnapanchal/hivelocity_test/issues/18)
+
+
+In above list of enhancements some are small and some are actually user stories so each of it contain details accordingly.
+
