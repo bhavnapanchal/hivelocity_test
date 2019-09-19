@@ -29,16 +29,16 @@ Timeline and extra points
 
 ## About
 
-This solution contain 3 fixes and 6 enhancments suggestion.
+This solution contain 3 fixes and 6 enhancements (suggestions).
 
 In this repository there are two main branches. **master**, **develop** and  other temporary branches under folder **issues/**.
 - master : contain original code (no change)
 - develop : contain all the bug fixes. (final code)
-- issues/* : contain all the branches dedicated to solve one particular issue.
-branches under this folder will eventually merged into develop branch.
+- issues/* : contain all the branches dedicated to particular issue.
+Branches under this folder will eventually merged into develop branch.
 
 ### Fix 
-This solution contain fixes of three main bug.
+This contain fixes of three main bugs.
 1. [Application crash when in home screen.](https://github.com/bhavnapanchal/hivelocity_test/issues/7)
 2. [Todo's title overlapping with its id](https://github.com/bhavnapanchal/hivelocity_test/issues/8)
 3. [Todo's id is hiding in landscape mode.](https://github.com/bhavnapanchal/hivelocity_test/issues/9)
@@ -48,12 +48,12 @@ All above issues are solved and merged into **develop** branch.
 ### Enhancements
 Here you can find list of enhancements.
 
-1.[User can not able to altered todo list item](https://github.com/bhavnapanchal/hivelocity_test/issues/10)
-2.[Should able to create user specific todo list](https://github.com/bhavnapanchal/hivelocity_test/issues/11)
-3.[When click on todo list item, Its navigate to next screen even if there is enough space to show detail.](https://github.com/bhavnapanchal/hivelocity_test/issues/12)
-4.[Implement MVVM](https://github.com/bhavnapanchal/hivelocity_test/issues/13)
-5.[Implement unit test](https://github.com/bhavnapanchal/hivelocity_test/issues/14)
+1. [User is not able to alter todo list item](https://github.com/bhavnapanchal/hivelocity_test/issues/10)
+2. [Should able to create user specific todo list](https://github.com/bhavnapanchal/hivelocity_test/issues/11)
+3. [When click on todo list item, Its navigate to next screen even if there is enough space to show detail.](https://github.com/bhavnapanchal/hivelocity_test/issues/12)
+4. [Implement MVVM](https://github.com/bhavnapanchal/hivelocity_test/issues/13)
+5. [Implement unit test](https://github.com/bhavnapanchal/hivelocity_test/issues/14)
 6. [Refresh todo list items](https://github.com/bhavnapanchal/hivelocity_test/issues/18)
 
-Here all the enhancements were explained in detail into issue linked to it. Please do comment inside the issue if you want more detailed information / plan for particular enhancement.
+All the enhancements were explained in detail into issue linked to it. Please do comment inside the issue if you want more detailed information / plan for particular enhancement.
 
